@@ -1,0 +1,20 @@
+/*remote development拡張機能を使うための設定。開発環境をコンテナ内に統一することで、
+開発者ごとの環境差異（OSやインストール済みソフトウェアの違いなど）をなくすため。*/
+
+{
+    "name": "TweetApp",
+    "dockerComposeFile":[
+        "docker_compose.yml"
+    ],
+    "service": "web",
+    "workspaceFolder": "/workspace",
+    "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+    },
+    "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-azuretools.vscode-docker"
+    ],
+    "remoteUser": "vscode"
+}
